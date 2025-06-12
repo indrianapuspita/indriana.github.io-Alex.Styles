@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Styles Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Alex Styles</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi! I'm Alex Styles, a web designer passionate about creating engaging, user-friendly experiences.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Featured Project</h2>
+    <div class="card" id="project-card">
+      <h3>Simple Landing Page</h3>
+      <p>This landing page is mobile-friendly and showcases modern UI/UX features.</p>
+      <button id="moreInfoBtn">More Info</button>
+    </div>
+  </section>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <p>This project was created using HTML, CSS, and Copilot for responsive and interactive features.</p>
+    </div>
+  </div>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email me at: <a href="mailto:alex@example.com" title="Send me an email">alex@example.com</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Alex Styles</p>
+  </footer>
+
+  <script>
+    // Modal functionality
+    const modal = document.getElementById("modal");
+    const btn = document.getElementById("moreInfoBtn");
+    const span = document.getElementById("closeModal");
+
+    btn.onclick = function () {
+      modal.style.display = "block";
+    };
+
+    span.onclick = function () {
+      modal.style.display = "none";
+    };
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>
